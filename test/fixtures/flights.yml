@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scheduled: 2021-01-05
+  to: MyText
+  from: MyText
+
+two:
+  scheduled: 2021-01-05
+  to: MyText
+  from: MyText
