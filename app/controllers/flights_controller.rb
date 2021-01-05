@@ -1,4 +1,7 @@
 class FlightsController < ApplicationController
+
+  skip_before_action :verify_authenticity_token, raise: false
+
   def new
   end
 
@@ -7,7 +10,9 @@ class FlightsController < ApplicationController
     flight = Flight.create(
       scheduled: params[:scheduled],
       to: params[:to],
-      from: params[:from]
+      from: params[:from],
+      flight_id: params[:flight_id],
+      plane_id: params[:plane_id]
     )
     render json: flight
   end
