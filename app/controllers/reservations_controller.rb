@@ -3,9 +3,16 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    headers['Access-Control-Allow-Origin'] = '*'
+    reservation = Reservation.create(
+
+    )
+    render json: reservation
   end
 
   def index
+    headers['Access-Control-Allow-Origin'] = '*'
+    render json: Reservation.all
   end
 
   def show
