@@ -11,8 +11,8 @@
   <%= f.label :from, "Departure:" %>
   <%= f.text_field :from %>
   <br/>
-  <%= f.label :plane_id, "Plane:" %>
-  <%= select(:flight, :plane_id, options_for_select(@planes)) %>
+  <%= f.label :airplane_id, "Plane:" %>
+  <%= select(:flight, :airplane_id, options_for_select(@planes)) %>
 
   <br/>
   <%= f.submit "Create Flight" %>

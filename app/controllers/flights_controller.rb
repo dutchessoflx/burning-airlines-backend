@@ -1,5 +1,5 @@
 class FlightsController < ApplicationController
-  before_action :check_for_admin
+  # before_action :check_for_admin
 
   def new
     @flights = Flight.new
@@ -12,12 +12,21 @@ class FlightsController < ApplicationController
   end
 
   def index
-    @flights = Flight.all
+    headers['Access-Control-Allow-Origin'] = '*'
 
-    respond_to do |format|
-      format.html { @flights }
-      format.json { render json: @flights }
+    if params[:to] || params[:from]
+      @flights = Flight.where( to: params[:to], from: params[:from] )
+    else
+      @flights = Flight.all
     end
+
+     render json: @flights
+
+  end
+
+  def react_index
+    flights = Flight.where( to: params[:to], from: params[:from] )
+    render json: flights
   end
 
   def show
@@ -41,7 +50,7 @@ class FlightsController < ApplicationController
 
   def flight_params
     params.require(:flight).permit(
-      :scheduled, :to, :from, :flight, :plane_id
+      :scheduled, :to, :from, :flight, :airplane_id
     )
   end
 end

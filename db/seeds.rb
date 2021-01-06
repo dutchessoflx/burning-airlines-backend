@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+User.destroy_all
 p 'creating user'
 
 u1=User.create!(
@@ -25,7 +25,7 @@ u2=User.create!(
 puts "Created #{User.count} users"
 puts User.pluck(:name).join(',')
 
-
+Airplane.destroy_all
 p 'creating airplanes'
 
 a1=Airplane.create!(
@@ -42,20 +42,24 @@ a2=Airplane.create!(
 
 puts "Created #{Airplane.count} aeroplanes"
 puts Airplane.pluck(:name).join(',')
+
+Flight.destroy_all
 p 'creating flights'
 
 f1=Flight.create!(
+  flight: 23,
   scheduled: "01/01/2021",
   to: "Sydney",
   from: "Perth",
-  plane_id: a1.id
+  airplane_id: a1.id
 )
 
 f2=Flight.create!(
+  flight: 87,
   scheduled: "02/02/2021",
   to: "Melbourne",
   from: "Perth",
-  plane_id: a2.id
+  airplane_id: a2.id
 )
 
 puts "Created #{Flight.count} flights"
