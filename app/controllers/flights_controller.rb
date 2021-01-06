@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
 
   skip_before_action :verify_authenticity_token, raise: false
-
+  before_action :check_for_admin
   def new
     @flight = Flight.new
   end

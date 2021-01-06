@@ -1,6 +1,7 @@
 class AirplanesController < ApplicationController
 
 skip_before_action :verify_authenticity_token, raise: false
+  before_action :check_for_admin
 
   def new
     @airplane = Airplane.new
@@ -21,6 +22,7 @@ skip_before_action :verify_authenticity_token, raise: false
     # headers['Access-Control-Allow-Origin'] = '*'
     # render json: Airplane.all
     @airplanes = Airplane.all
+
   end
 
   def show
