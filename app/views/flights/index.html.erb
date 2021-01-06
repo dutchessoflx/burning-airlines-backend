@@ -1,31 +1,30 @@
 <h1>Flights</h1>
 
-<ul class='flights'>
-  <li>Date</li>
-  <li>Flight</li>
-  <li>From > To</li>
-  <li>Plane</li>
-  <li>Seats</li>
-</ul>
-<ul>
   <% @flights.each do |flight| %>
+  <ul>
     <li>
-      <%= flight.scheduled %>
+      Date: <%= flight.scheduled %>
     </li>
+    |
     <li>
-      <%= flight.flight_number %>
+      <a href="http://localhost:3001/#/flights/<%= flight.flight_number %>" target="_blank">
+        Flight: <%= flight.flight_number %>
+      </a>
     </li>
+    |
     <li>
-      <%= flight.from %> > <%= flight.to %>
+      <%= flight.from %> to <%= flight.to %>
     </li>
+    |
     <li>
-      <%= flight.airplane.name %>
+      Airplane: <%= flight.airplane.name %>
     </li>
+    |
     <li>
-      <%= flight.airplane.rows * flight.airplane.cols %>
+      Open Seats: <%= flight.airplane.rows * flight.airplane.cols - flight.reservations.count %> of <%= flight.airplane.rows * flight.airplane.cols %>
     </li>
+  </ul>
   <% end %>
-</ul>
 
 
 <%=link_to "Add a Flight", new_flight_path %>

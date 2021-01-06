@@ -32,12 +32,16 @@ a:hover{
   font-weight: bolder;
 }
 ul{
+  font-size: 18px;
   background-color: rgba(255, 0, 0, 0.6);
   border-radius: 10px;
-    width: 60vw;
-    margin:auto;
+  width: 60vw;
+  margin: 5px auto;
+  padding: 0;
 }
 li{
   list-style: none;
   border-radius: 10px;
+  display: inline-block;
+  padding: 10px 0;
 }
