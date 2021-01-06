@@ -14,7 +14,6 @@ u1=User.create!(
   email: 'admin@email.com',
   admin: 1,
   password: 'chicken'
-)
 
 u2=User.create!(
   name: "Guest",
@@ -22,10 +21,12 @@ u2=User.create!(
   admin: 0,
   password: 'chicken'
 )
+
 puts "Created #{User.count} users"
 puts User.pluck(:name).join(',')
 
 Airplane.destroy_all
+
 p 'creating airplanes'
 
 a1=Airplane.create!(
@@ -44,6 +45,7 @@ puts "Created #{Airplane.count} aeroplanes"
 puts Airplane.pluck(:name).join(',')
 
 Flight.destroy_all
+
 p 'creating flights'
 
 f1=Flight.create!(
