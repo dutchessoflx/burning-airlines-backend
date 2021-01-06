@@ -13,7 +13,7 @@
       <%= flight.scheduled %>
     </li>
     <li>
-      <%= flight.flight_id %>
+      <%= flight.flight_number %>
     </li>
     <li>
       <%= flight.from %> > <%= flight.to %>
@@ -22,7 +22,7 @@
       <%= flight.airplane.name %>
     </li>
     <li>
-      <%= flight.airplane.rows %>
+      <%= flight.airplane.rows * flight.airplane.cols %>
     </li>
   <% end %>
 </ul>

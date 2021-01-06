@@ -1,6 +1,6 @@
 <%= form_with model: @flights, local: true do |f| %>
-  <%= f.label :flight, "Flight #:" %>
-  <%= f.text_field :flight %>
+  <%= f.label :flight_number, "Flight #:" %>
+  <%= f.text_field :flight_number %>
   <br/>
   <%= f.label :scheduled, "Date:" %>
   <%= f.date_field :scheduled %>

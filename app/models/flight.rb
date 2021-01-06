@@ -4,7 +4,7 @@ class Flight < ApplicationRecord
   has_and_belongs_to_many :users, through: :reservations, optional: true
 
   def generate_seat_map
-    rows = self.airplane.row
+    rows = self.airplane.rows
     cols = self.airplane.cols
 
     startRow = 21
@@ -19,7 +19,7 @@ class Flight < ApplicationRecord
         id = row.to_s + col.to_s
         columnLabel = columnLabels[col]
         status = 'open'
-        status = 'closed' if self.seat_is_reserved?( id )
+        status = 'closed' if self.seat_is_reserved? id
 
         row_data[startRow] << {id: id, col: columnLabel, status: status}
       end
@@ -35,7 +35,7 @@ class Flight < ApplicationRecord
     reserved = false
 
     self.reservations.each do |reservation|
-      seat_id = reservation.row + reservation.cols
+      seat_id = reservation.row.to_s + reservation.cols.to_s
       reserved = true if seat_id == id
     end
 

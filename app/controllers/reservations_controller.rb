@@ -6,10 +6,10 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    headers['Access-Control-Allow-Origin'] = '*'
+    # headers['Access-Control-Allow-Origin'] = '*'
     reservation = Reservation.create(
-      row: params[:row],
-      cols: params[:cols],
+      row: params[:seat_id].slice(0),
+      cols: params[:seat_id].slice(1),
       user_id: params[:user_id],
       flight_id: params[:flight_id]
     )
@@ -17,7 +17,8 @@ class ReservationsController < ApplicationController
   end
 
   def index
-    headers['Access-Control-Allow-Origin'] = '*'
+    # headers['Access-Control-Allow-Origin'] = '*'
+
     flight = Flight.find_by flight_number: params[:flight_number]
     seat_map = flight.generate_seat_map
 
