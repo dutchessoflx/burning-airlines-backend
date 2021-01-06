@@ -1,4 +1,4 @@
-<h1><%= @airplane.id %>) <%= @airplane.name %> </h1>
+<h1>#<%= @airplane.id %> ~ <%= @airplane.name %> </h1>
 
 <ul>
   <li>Number of Rows-
@@ -10,10 +10,11 @@
   <li>Total Seats-
     <%= @airplane.rows * @airplane.cols %>
   </li>
-  <li>Available Seats?
-  </li>
+  <!-- <li>Available Seats?
+  </li> -->
 
 </ul>
+
 
 
 
@@ -23,3 +24,5 @@
 <%= link_to "Edit this Airplane", edit_airplane_path(@airplane.id) %>
 <%= link_to "Delete this Airplane", airplane_path(@airplane.id), method: 'delete' %>
 <% end %>
+<br>
+<%= link_to "Go back to All Airplanes", airplanes_path %>
