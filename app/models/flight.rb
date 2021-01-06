@@ -4,13 +4,16 @@ class Flight < ApplicationRecord
   has_and_belongs_to_many :users, through: :reservations, optional: true
 
   def generate_seat_map
-    row = self.airplane.row
+    rows = self.airplane.row
     cols = self.airplane.cols
+    result = []
 
-    row.times do
-      cols.times do
+    rows.times do |row|
+      row_data = {}
+      cols.times do |col|
+        
       end
     end
-    
+
   end
 end
