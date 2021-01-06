@@ -1,10 +1,6 @@
 class FlightsController < ApplicationController
-<<<<<<< HEAD
-
-  skip_before_action :verify_authenticity_token, raise: false
   before_action :check_for_admin
-=======
->>>>>>> 078e356d8bc68646700d21f642e53a3f95c206f7
+
   def new
     @flights = Flight.new
     @planes = Airplane.all.map{ |plane| [ plane.name, plane.id ] }

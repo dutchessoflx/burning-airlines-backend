@@ -1,12 +1,30 @@
 <h1>Flights</h1>
 
 <ul class='flights'>
-  <% @flights.each do |f| %>
-  <li>
-    <%= link_to f.id, flight_path(f.id)%>
-  </li>
+  <li>Date</li>
+  <li>Flight</li>
+  <li>From > To</li>
+  <li>Plane</li>
+  <li>Seats</li>
+</ul>
+<ul>
+  <% @flights.each do |flight| %>
+    <li>
+      <%= flight.scheduled %>
+    </li>
+    <li>
+      <%= flight.flight %>
+    </li>
+    <li>
+      <%= flight.from %> > <%= flight.to %>
+    </li>
+    <li>
+      <%= flight.airplane.name %>
+    </li>
+    <li>
+      <%= flight.airplane.row %>
+    </li>
   <% end %>
-
 </ul>
 
 
