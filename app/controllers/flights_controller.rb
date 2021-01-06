@@ -1,28 +1,27 @@
 class FlightsController < ApplicationController
+<<<<<<< HEAD
 
   skip_before_action :verify_authenticity_token, raise: false
   before_action :check_for_admin
+=======
+>>>>>>> 078e356d8bc68646700d21f642e53a3f95c206f7
   def new
-    @flight = Flight.new
+    @flights = Flight.new
+    @planes = Airplane.all.map{ |plane| [ plane.name, plane.id ] }
   end
 
   def create
-    headers['Access-Control-Allow-Origin'] = '*'
-    flight = Flight.create(
-      scheduled: params[:scheduled],
-      to: params[:to],
-      from: params[:from],
-      flight_id: params[:flight_id],
-      plane_id: params[:plane_id]
-    )
+    Flight.create flight_params
     redirect_to flights_path
-    # render json: flight
   end
 
   def index
-    headers['Access-Control-Allow-Origin'] = '*'
     @flights = Flight.all
-    # render json: Flight.all
+
+    respond_to do |format|
+      format.html { @flights }
+      format.json { render json: @flights }
+    end
   end
 
   def show
@@ -43,7 +42,10 @@ class FlightsController < ApplicationController
   end
 
   private
+
   def flight_params
-    params.require(:flight).permit(:scheduled, :to, :from, :flight_id, :plane_id)
+    params.require(:flight).permit(
+      :scheduled, :to, :from, :flight, :plane_id
+    )
   end
 end

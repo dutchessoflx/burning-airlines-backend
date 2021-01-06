@@ -725,6 +725,269 @@ Migrating to AddPasswordDigestToUsers (20210105224225)
   ↳ bin/rails:4
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+<<<<<<< HEAD
+  [1m[35m (768.8ms)[0m  [1m[35mCREATE DATABASE "rails-burning-airlines_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (639.4ms)[0m  [1m[35mCREATE DATABASE "rails-burning-airlines_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (47.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (21.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateAirplanes (20210105052215)
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE TABLE "airplanes" ("id" bigserial primary key, "name" text, "rows" integer, "cols" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210105052215_create_airplanes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105052215"]]
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateFlights (20210105052242)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "flights" ("id" bigserial primary key, "scheduled" date, "to" text, "from" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210105052242_create_flights.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105052242"]]
+  ↳ bin/rails:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20210105052301)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210105052301_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105052301"]]
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateReservations (20210105052309)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210105052309_create_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105052309"]]
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFlightIdToFlights (20210105223541)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "flights" ADD "flight_id" integer[0m
+  ↳ db/migrate/20210105223541_add_flight_id_to_flights.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223541"]]
+  ↳ bin/rails:4
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddPlaneIdToFlights (20210105223648)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "flights" ADD "plane_id" integer[0m
+  ↳ db/migrate/20210105223648_add_plane_id_to_flights.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223648"]]
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddRowToReservations (20210105223839)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "reservations" ADD "row" integer[0m
+  ↳ db/migrate/20210105223839_add_row_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223839"]]
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColsToReservations (20210105223902)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "reservations" ADD "cols" integer[0m
+  ↳ db/migrate/20210105223902_add_cols_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (5.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223902"]]
+  ↳ bin/rails:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddUserIdToReservations (20210105223929)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "reservations" ADD "user_id" integer[0m
+  ↳ db/migrate/20210105223929_add_user_id_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223929"]]
+  ↳ bin/rails:4
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFlightIdToReservations (20210105223958)
+  [1m[35m (5.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "reservations" ADD "flight_id" integer[0m
+  ↳ db/migrate/20210105223958_add_flight_id_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223958"]]
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddEmailToUsers (20210105224027)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "email" text[0m
+  ↳ db/migrate/20210105224027_add_email_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224027"]]
+  ↳ bin/rails:4
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddAdminToUsers (20210105224056)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  ↳ db/migrate/20210105224056_add_admin_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224056"]]
+  ↳ bin/rails:4
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddPasswordToUsers (20210105224119)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "password" text[0m
+  ↳ db/migrate/20210105224119_add_password_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224119"]]
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddPasswordDigestToUsers (20210105224225)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  ↳ db/migrate/20210105224225_add_password_digest_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224225"]]
+  ↳ bin/rails:4
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-05 23:15:50.815224"], ["updated_at", "2021-01-05 23:15:50.815224"]]
+  ↳ bin/rails:4
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Admin"], ["created_at", "2021-01-05 23:17:01.179641"], ["updated_at", "2021-01-05 23:17:01.179641"], ["password_digest", "$2a$12$1Ww.B6G012n9dBLZpjVM9u9XtBtcUiM5tihSw5.DygbnO4fnkkM5q"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Guest"], ["created_at", "2021-01-05 23:17:01.518934"], ["updated_at", "2021-01-05 23:17:01.518934"], ["password_digest", "$2a$12$UWvIZxJ4qMLQaa8SAId4a.A1f3sD91LGnOvxFSczGHVn.nvI9TN1."]]
+  ↳ db/seeds.rb:17
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mAirplane Create (2.0ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "cols", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bi-plane"], ["rows", 10], ["cols", 6], ["created_at", "2021-01-05 23:17:01.569835"], ["updated_at", "2021-01-05 23:17:01.569835"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mAirplane Create (0.5ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "cols", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "747"], ["rows", 20], ["cols", 9], ["created_at", "2021-01-05 23:17:01.579961"], ["updated_at", "2021-01-05 23:17:01.579961"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "airplanes"."name" FROM "airplanes"[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mFlight Create (0.9ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["scheduled", "2021-01-01"], ["to", "Sydney"], ["from", "Perth"], ["created_at", "2021-01-05 23:17:01.676932"], ["updated_at", "2021-01-05 23:17:01.676932"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mFlight Create (0.6ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["scheduled", "2021-02-02"], ["to", "Melbourne"], ["from", "Perth"], ["created_at", "2021-01-05 23:17:01.686605"], ["updated_at", "2021-01-05 23:17:01.686605"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "flights"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "flights"."to" FROM "flights"[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (6.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Admin"], ["created_at", "2021-01-05 23:18:00.976389"], ["updated_at", "2021-01-05 23:18:00.976389"], ["password_digest", "$2a$12$UaFe9TPRhT26N1KfjNzYPOxNyrAnUoFDlpz2cdFPhjdZe7eQ48r.m"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Guest"], ["created_at", "2021-01-05 23:18:01.296331"], ["updated_at", "2021-01-05 23:18:01.296331"], ["password_digest", "$2a$12$LWe3y94fq/0Q95O61twbjuHjixk4tWvt3BLmE.yLiviP6.rKPd4.C"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mAirplane Create (0.9ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "cols", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bi-plane"], ["rows", 10], ["cols", 6], ["created_at", "2021-01-05 23:18:01.348699"], ["updated_at", "2021-01-05 23:18:01.348699"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mAirplane Create (0.6ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "cols", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "747"], ["rows", 20], ["cols", 9], ["created_at", "2021-01-05 23:18:01.355744"], ["updated_at", "2021-01-05 23:18:01.355744"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "airplanes"."name" FROM "airplanes"[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mFlight Create (0.8ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["scheduled", "2021-01-01"], ["to", "Sydney"], ["from", "Perth"], ["created_at", "2021-01-05 23:18:01.442998"], ["updated_at", "2021-01-05 23:18:01.442998"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mFlight Create (1.7ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["scheduled", "2021-02-02"], ["to", "Melbourne"], ["from", "Perth"], ["created_at", "2021-01-05 23:18:01.452950"], ["updated_at", "2021-01-05 23:18:01.452950"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "flights"[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "flights"."to" FROM "flights"[0m
+  ↳ db/seeds.rb:56
+Started GET "/" for ::1 at 2021-01-06 10:42:28 +1100
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jkups/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+=======
 Started GET "/airplanes/index" for ::1 at 2021-01-06 10:12:23 +1100
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/Brooke/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -790,6 +1053,7 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/" for ::1 at 2021-01-06 10:16:01 +1100
+>>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
   
 ActionController::RoutingError (uninitialized constant AirplaneController):
   
@@ -850,6 +1114,302 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/flights/new" for ::1 at 2021-01-06 10:44:10 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 711ms (Views: 649.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:51:14 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:51:30 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 113ms (Views: 111.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:52:43 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:52:53 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 109ms (Views: 33.8ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:53:03 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 207ms (Views: 204.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:53:07 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 10:54:19 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:4: syntax error, unexpected string literal, expecting ')'
+...ffer.append=( f.label :flight "Flight #:" );@output_buffer.s...
+...                              ^
+/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:7: syntax error, unexpected string literal, expecting ')'
+...buffer.append=( f.label :date "Date:" );@output_buffer.safe_...
+...                              ^
+/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:10: syntax error, unexpected string literal, expecting ')'
+...t_buffer.append=( f.label :to "Arrival:" );@output_buffer.sa...
+...                              ^
+/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:13: syntax error, unexpected string literal, expecting ')'
+...buffer.append=( f.label :from "Departure:" );@output_buffer....
+...                              ^
+):
+  
+app/views/flights/new.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/flights/new.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/flights/new.html.erb:10: syntax error, unexpected string literal, expecting ')'
+app/views/flights/new.html.erb:13: syntax error, unexpected string literal, expecting ')'
+Started GET "/flights/new" for ::1 at 2021-01-06 10:54:44 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:4: syntax error, unexpected string literal, expecting ')'
+...t_buffer.append=( f.label :id "Flight #:" );@output_buffer.s...
+...                              ^
+/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:7: syntax error, unexpected string literal, expecting ')'
+...buffer.append=( f.label :date "Date:" );@output_buffer.safe_...
+...                              ^
+/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:10: syntax error, unexpected string literal, expecting ')'
+...t_buffer.append=( f.label :to "Arrival:" );@output_buffer.sa...
+...                              ^
+/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:13: syntax error, unexpected string literal, expecting ')'
+...buffer.append=( f.label :from "Departure:" );@output_buffer....
+...                              ^
+):
+  
+app/views/flights/new.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/flights/new.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/flights/new.html.erb:10: syntax error, unexpected string literal, expecting ')'
+app/views/flights/new.html.erb:13: syntax error, unexpected string literal, expecting ')'
+Started GET "/flights/new" for ::1 at 2021-01-06 10:55:13 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 200ms (Views: 185.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 11:02:41 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 125ms (Views: 51.8ms | ActiveRecord: 18.5ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddFlightToFlights (20210106000501)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.1ms)[0m  [1m[35mALTER TABLE "flights" ADD "flight" integer[0m
+  ↳ db/migrate/20210106000501_add_flight_to_flights.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210106000501"]]
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/flights/new" for ::1 at 2021-01-06 11:09:03 +1100
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jkups/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (32.7ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 15.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    14:   <%= f.text_field :from %>
+    15:   <br/>
+    16:   <%= f.label :plane, "Plane" %>
+    17:   <%= f.select :plane %>
+    18:   <br/>
+    19:   <%= f.submit "Create Flight" %>
+    20: <% end %>
+  
+app/views/flights/new.html.erb:17:in `block in _app_views_flights_new_html_erb__1155501608704486723_21260'
+app/views/flights/new.html.erb:3:in `_app_views_flights_new_html_erb__1155501608704486723_21260'
+Started GET "/flights/new" for ::1 at 2021-01-06 11:14:13 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  [1m[36mAirplane Load (3.2ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/flights/new.html.erb:16
+  Rendered flights/new.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 160ms (Views: 137.8ms | ActiveRecord: 19.3ms)
+
+
+  [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+Started GET "/flights/new" for ::1 at 2021-01-06 11:20:21 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (1.0ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 280ms (Views: 44.8ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 11:20:55 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (15.0ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 15.0ms)
+
+
+  
+SyntaxError (/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:16: syntax error, unexpected string literal, expecting ')'
+... options_for_select(@planes)) "Plane:" );@output_buffer.safe...
+...                              ^
+):
+  
+app/views/flights/new.html.erb:16: syntax error, unexpected string literal, expecting ')'
+Started GET "/flights/new" for ::1 at 2021-01-06 11:21:04 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (8.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 8.3ms)
+
+
+  
+SyntaxError (/home/jkups/sei/projects/burning-airlines/burning-airlines-backend/app/views/flights/new.html.erb:16: syntax error, unexpected ',', expecting ')'
+..., options_for_select(@planes)), "Plane:" );@output_buffer.sa...
+...                              ^
+):
+  
+app/views/flights/new.html.erb:16: syntax error, unexpected ',', expecting ')'
+Started GET "/flights/new" for ::1 at 2021-01-06 11:22:11 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (12.0ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 161ms (Views: 144.5ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 11:23:53 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 315ms (Views: 110.1ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 11:24:05 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (10.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 696ms (Views: 221.7ms | ActiveRecord: 73.7ms)
+
+
+Started POST "/flights" for ::1 at 2021-01-06 11:50:56 +1100
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"my0JyuQUY3CsPzo7AWQVmbZ8OKPDLDzPt6XzK3FM9B4n/WFpJJAyFqLVmZyCsxB2feLG8yyhKVHcq0y7YESqdA==", "flight"=>{"flight"=>"747", "date"=>"2021-01-22", "to"=>"JFK", "from"=>"SPO", "plane_id"=>"2"}, "commit"=>"Create Flight"}
+Unpermitted parameter: :date
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:8
+  [1m[36mFlight Create (14.2ms)[0m  [1m[32mINSERT INTO "flights" ("to", "from", "created_at", "updated_at", "plane_id", "flight") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["to", "JFK"], ["from", "SPO"], ["created_at", "2021-01-06 00:50:56.342326"], ["updated_at", "2021-01-06 00:50:56.342326"], ["plane_id", 2], ["flight", 747]]
+  ↳ app/controllers/flights_controller.rb:8
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:8
+Completed 500 Internal Server Error in 555ms (ActiveRecord: 16.8ms)
+
+
+  
+NameError (undefined local variable or method `flights_index_path' for #<FlightsController:0x00007f6270070380>
+Did you mean?  flights_new_path):
+  
+app/controllers/flights_controller.rb:9:in `create'
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Started GET "/flights/new" for ::1 at 2021-01-06 11:55:55 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (0.9ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 220ms (Views: 77.9ms | ActiveRecord: 38.6ms)
+
+
+Started POST "/flights" for ::1 at 2021-01-06 11:56:14 +1100
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7RU/18vK6YhSsHnlv68G2ivjtlu08yX2KPXep/+kQsFRxVd0C0647lxa2kI8eAM14H1IC1t+MGhD+2E37qwcqw==", "flight"=>{"flight"=>"754", "scheduled"=>"2021-01-14", "to"=>"JFK", "from"=>"SPO", "plane_id"=>"4"}, "commit"=>"Create Flight"}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:8
+  [1m[36mFlight Create (1.0ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at", "plane_id", "flight") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["scheduled", "2021-01-14"], ["to", "JFK"], ["from", "SPO"], ["created_at", "2021-01-06 00:56:14.353796"], ["updated_at", "2021-01-06 00:56:14.353796"], ["plane_id", 4], ["flight", 754]]
+  ↳ app/controllers/flights_controller.rb:8
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:8
+Redirected to http://localhost:3000/flights
+Completed 302 Found in 21ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/flights" for ::1 at 2021-01-06 11:56:14 +1100
+Processing by FlightsController#index as HTML
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:13
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights" for ::1 at 2021-01-06 12:06:08 +1100
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  Rendered flights/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 342ms (Views: 232.6ms | ActiveRecord: 0.0ms)
+
+
+=======
 Started GET "/airplanes" for ::1 at 2021-01-06 10:16:09 +1100
 Processing by AirplanesController#index as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
@@ -2825,6 +3385,7 @@ app/views/flights/show.html.erb:15:in `_app_views_flights_show_html_erb__2296157
   ↳ db/seeds.rb:61
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "flights"."to" FROM "flights"[0m
   ↳ db/seeds.rb:62
+<<<<<<< HEAD
 Started GET "/airplanes" for ::1 at 2021-01-06 12:07:02 +1100
 Processing by AirplanesController#index as HTML
   Rendering airplanes/index.html.erb within layouts/application
@@ -3849,3 +4410,6 @@ Migrating to AddAirplaneIdToFlights (20210106015226)
   ↳ bin/rails:4
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+=======
+>>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
+>>>>>>> 078e356d8bc68646700d21f642e53a3f95c206f7

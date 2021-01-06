@@ -10,6 +10,14 @@
   </head>
 
   <body>
+<<<<<<< HEAD
+    <nav>
+      <ul>
+        <li>Planes</li>
+        <li>Flights</li>
+      </ul>
+    </nav>
+=======
     <div>
     <% if @current_user.present? %>
       Welcome,<%=link_to @current_user.name, user_path(@current_user.id), class:'name' %>
@@ -30,6 +38,7 @@
         <%= link_to 'Sign Up', new_user_path, class: 'log' %>
       <% end %>
         </div>
+>>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
     <%= yield %>
   </body>
 </html>
