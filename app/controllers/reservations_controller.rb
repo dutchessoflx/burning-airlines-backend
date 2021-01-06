@@ -18,6 +18,11 @@ class ReservationsController < ApplicationController
 
   def index
     headers['Access-Control-Allow-Origin'] = '*'
+    flights = Flight.find_by flight: params[:flightNumber]
+
+    flight.generate_seat_map
+
+
     render json: Reservation.all
   end
 
