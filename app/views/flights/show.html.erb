@@ -1,2 +1,29 @@
-<h1>Flights#show</h1>
-<p>Find me in app/views/flights/show.html.erb</p>
+<h1><%= @flight.id %>) <%= @flight.flight_id %> </h1>
+
+<ul>
+  <li>Scheduled date of departure-
+    <%= @flight.scheduled %>
+  </li>
+  <li>To-
+    <%= @flight.to %>
+  </li>
+  <li>From-
+    <%= @flight.from %>
+  </li>
+  <li>Plane-
+    <%=@flight.plane_id %>
+    <%=@flight.airplane.name %>
+
+  </li>
+  <li>Number of seats availble-
+    <%=%>
+  </li>
+</ul>
+
+
+
+<br>
+<% if :check_for_admin == true%>
+<% end %>
+<%= link_to "Edit this Flight", edit_flight_path(@flight.id) %>
+<%= link_to "Delete this Flight", flight_path(@flight.id), method: 'delete' %>

@@ -1,0 +1,19 @@
+<%= form_with model:@reservations, local:true do |f| %>
+
+<%= f.label :row %>
+<%= f.text_field :row %>
+
+<%= f.label :cols %>
+<%= f.text_field :cols %>
+
+<%= f.label :user_id %>
+<%= f.text_field :user_id %>
+
+<%= f.label :flight_id %>
+<%= f.text_field :flight_id %>
+
+
+
+
+<%= f.submit %>
+<%end %>

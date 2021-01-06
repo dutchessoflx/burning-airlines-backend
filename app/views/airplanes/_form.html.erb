@@ -1,0 +1,12 @@
+<%= form_with model:@airplane, local:true, html: {multipart: true}  do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :rows %>
+<%= f.text_field :rows %>
+
+<%= f.label :cols %>
+<%= f.text_field :cols %>
+<%= f.submit %>
+<%end %>

@@ -19,12 +19,17 @@ class FlightsController < ApplicationController
   end
 
   def show
+    @flight= Flight.find params[:id]
   end
 
   def edit
+    @flight = Flight.find params[:id]
   end
 
   def update
+    @flight = Flight.find params[:id]
+    @flight.update flight_params
+    redirect_to flight_path(@flight.id)
   end
 
   def destroy
