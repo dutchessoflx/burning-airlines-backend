@@ -14,6 +14,7 @@ u1=User.create!(
   email: 'admin@email.com',
   admin: 1,
   password: 'chicken'
+)
 
 u2=User.create!(
   name: "Guest",
@@ -49,7 +50,7 @@ Flight.destroy_all
 p 'creating flights'
 
 f1=Flight.create!(
-  flight: 23,
+  flight_id: 23,
   scheduled: "01/01/2021",
   to: "Sydney",
   from: "Perth",
@@ -57,7 +58,7 @@ f1=Flight.create!(
 )
 
 f2=Flight.create!(
-  flight: 87,
+  flight_id: 87,
   scheduled: "02/02/2021",
   to: "Melbourne",
   from: "Perth",
