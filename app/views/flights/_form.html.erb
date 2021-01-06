@@ -1,0 +1,21 @@
+<%= form_with model:@flight, local:true do |f| %>
+
+<%= f.label :scheduled %>
+<%= f.text_field :scheduled %>
+
+<%= f.label :to %>
+<%= f.text_field :to %>
+
+<%= f.label :from %>
+<%= f.text_field :from %>
+
+<%= f.label :flight_id %>
+<%= f.text_field :flight_id %>
+
+<%= f.label :plane_id %>
+<%= f.text_field :plane_id %>
+
+
+
+<%= f.submit %>
+<%end %>

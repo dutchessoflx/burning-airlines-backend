@@ -1,23 +1,22 @@
 Rails.application.routes.draw do
 
-  root to: 'airplane#index'
+  get 'page/new'
+    get '/search' => 'pages#search', :as => 'search_page'
+    get 'session/new'
+    root to: "page#home"
 
-  get '/airplanes' => 'airplanes#index'
-
-  post '/airplanes' => 'airplanes#create'
-
-
-  get '/flights' => 'flights#index'
-
-  post '/flights' => 'flights#create'
+    get '/login' => 'session#new'
+    post '/login' => 'session#create'
+    delete '/login' => 'session#destroy'
 
 
-  get '/users' => 'users#index'
 
-  post '/users' => 'users#create'
+  resources :airplanes
+  resources :users
+  resources :flights
+  resources :reservations
 
 
-  get '/reservations' => 'reservations#index'
 
-  post '/reservations' => 'reservations#create'
+
 end

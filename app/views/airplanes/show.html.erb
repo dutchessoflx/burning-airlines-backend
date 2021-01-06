@@ -1,2 +1,24 @@
-<h1>Airplanes#show</h1>
-<p>Find me in app/views/airplanes/show.html.erb</p>
+<h1><%= @airplane.id %>) <%= @airplane.name %> </h1>
+
+<ul>
+  <li>Number of Rows-
+    <%= @airplane.rows %>
+  </li>
+  <li>Number of Columns-
+    <%= @airplane.cols %>
+  </li>
+  <li>Total Seats-
+    <%= @airplane.rows * @airplane.cols %>
+  </li>
+  <li>Available Seats?
+  </li>
+
+</ul>
+
+
+
+<br>
+<% if :check_for_admin == true%>
+<% end %>
+<%= link_to "Edit this Airplane", edit_airplane_path(@airplane.id) %>
+<%= link_to "Delete this Airplane", airplane_path(@airplane.id), method: 'delete' %>
