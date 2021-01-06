@@ -18,7 +18,8 @@
 
 
 <br>
-<% if :check_for_admin == true%>
-<% end %>
+<% if @current_user.admin == true%>
+
 <%= link_to "Edit this Airplane", edit_airplane_path(@airplane.id) %>
 <%= link_to "Delete this Airplane", airplane_path(@airplane.id), method: 'delete' %>
+<% end %>

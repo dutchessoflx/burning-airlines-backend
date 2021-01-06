@@ -1,4 +1,6 @@
 class FlightsController < ApplicationController
+  before_action :check_for_admin
+
   def new
     @flights = Flight.new
     @planes = Airplane.all.map{ |plane| [ plane.name, plane.id ] }

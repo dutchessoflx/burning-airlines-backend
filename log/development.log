@@ -3385,7 +3385,1034 @@ app/views/flights/show.html.erb:15:in `_app_views_flights_show_html_erb__2296157
   ↳ db/seeds.rb:61
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "flights"."to" FROM "flights"[0m
   ↳ db/seeds.rb:62
+<<<<<<< HEAD
+Started GET "/airplanes" for ::1 at 2021-01-06 12:07:02 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:4
+  Rendered airplanes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 576ms (Views: 573.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/airplanes/2" for ::1 at 2021-01-06 12:07:13 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:27
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+     8:     <%= @airplane.cols %>
+     9:   </li>
+    10:   <li>Total Seats-
+    11:     <%= @airplane.rows * @airplane.cols %>
+    12:   </li>
+    13:   <li>Available Seats?
+    14:   </li>
+  
+app/views/airplanes/show.html.erb:11:in `_app_views_airplanes_show_html_erb__1274410400328237649_150720'
+Started GET "/login" for ::1 at 2021-01-06 12:09:25 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 146ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:09:50 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:12:23 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:13:42 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:14:46 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:14:55 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:18:27 +1100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Brooke/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.contact does not exist
+LINE 1: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 ...
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 LIMIT $2):
+  
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:18:35 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PyzVF6JIIhmLMdzp7iR3EIVIi7E8AqoBip8jZyiSdUt9alODR+8ei9aVwRAoB6Okl1EqzIrA3IN70uvYtMnPeg==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.contact does not exist
+LINE 1: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 ...
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 LIMIT $2):
+  
+app/controllers/session_controller.rb:6:in `create'
+Started GET "/" for ::1 at 2021-01-06 12:18:44 +1100
+Processing by PageController#home as HTML
+  Rendering page/home.html.erb within layouts/application
+  Rendered page/home.html.erb within layouts/application (0.7ms)
+Started GET "/" for ::1 at 2021-01-06 12:18:47 +1100
+Processing by PageController#home as HTML
+  Rendering page/home.html.erb within layouts/application
+  Rendered page/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 160ms (Views: 158.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2888ms (Views: 2445.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:18:52 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (388.9ms)
+Completed 200 OK in 482ms (Views: 402.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:19:00 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+AJFcsM1JfN9wpgp2G9mCZRubrNfB/TWOIn9c8mKWwppo+BLqvoBZBTF5lhQmksNEgYx3u+aVGpr+9KU32TXQ==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.contact does not exist
+LINE 1: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 ...
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 LIMIT $2):
+  
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:20:03 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+AJFcsM1JfN9wpgp2G9mCZRubrNfB/TWOIn9c8mKWwppo+BLqvoBZBTF5lhQmksNEgYx3u+aVGpr+9KU32TXQ==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.contact does not exist
+LINE 1: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 ...
+                                             ^
+: SELECT  "users".* FROM "users" WHERE "users"."contact" = $1 LIMIT $2):
+  
+app/controllers/session_controller.rb:6:in `create'
+Started POST "/login" for ::1 at 2021-01-06 12:22:04 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+AJFcsM1JfN9wpgp2G9mCZRubrNfB/TWOIn9c8mKWwppo+BLqvoBZBTF5lhQmksNEgYx3u+aVGpr+9KU32TXQ==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 10.7ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/session_controller.rb:7:in `create'
+  [1m[35m (20.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (30.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "admin", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Admin"], ["created_at", "2021-01-06 01:28:23.737229"], ["updated_at", "2021-01-06 01:28:23.737229"], ["email", "admin@email.com"], ["admin", true], ["password_digest", "$2a$12$7xejH3OqFQcQiZiMAw1IDOSbQUj1nqM4LCLSQoLk5SpzdPJTMMEF."]]
+  ↳ db/seeds.rb:12
+  [1m[35m (14.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "admin", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Guest"], ["created_at", "2021-01-06 01:28:24.069310"], ["updated_at", "2021-01-06 01:28:24.069310"], ["email", "guest@email.com"], ["admin", false], ["password_digest", "$2a$12$LjKw8PgmPqzgxpAEPAEeveNmPNdA09PbMo9dKpAhKtVzrJL/UqOQC"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mAirplane Create (20.1ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "cols", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bi-plane"], ["rows", 10], ["cols", 6], ["created_at", "2021-01-06 01:28:24.096454"], ["updated_at", "2021-01-06 01:28:24.096454"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mAirplane Create (0.5ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "cols", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "747"], ["rows", 20], ["cols", 9], ["created_at", "2021-01-06 01:28:24.119234"], ["updated_at", "2021-01-06 01:28:24.119234"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "airplanes"."name" FROM "airplanes"[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mFlight Create (14.6ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at", "plane_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["scheduled", "2021-01-01"], ["to", "Sydney"], ["from", "Perth"], ["created_at", "2021-01-06 01:28:24.175853"], ["updated_at", "2021-01-06 01:28:24.175853"], ["plane_id", 9]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("scheduled", "to", "from", "created_at", "updated_at", "plane_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["scheduled", "2021-02-02"], ["to", "Melbourne"], ["from", "Perth"], ["created_at", "2021-01-06 01:28:24.192792"], ["updated_at", "2021-01-06 01:28:24.192792"], ["plane_id", 10]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "flights"[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "flights"."to" FROM "flights"[0m
+  ↳ db/seeds.rb:62
+Started POST "/login" for ::1 at 2021-01-06 12:28:47 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+AJFcsM1JfN9wpgp2G9mCZRubrNfB/TWOIn9c8mKWwppo+BLqvoBZBTF5lhQmksNEgYx3u+aVGpr+9KU32TXQ==", "contact"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/session_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2021-01-06 12:29:11 +1100
+Processing by PageController#home as HTML
+  Rendering page/home.html.erb within layouts/application
+  Rendered page/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1208ms (Views: 1098.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:29:30 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 191ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:29:42 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xVvqS8Q2usAGj4MFq0c2hjMQ/Zqc+OCsBosfRQqEI0OHHWzfIZGGUlsrnvxtZOIyIQlc5yo6li73xtf6lt+Zcg==", "email"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 304ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/7" for ::1 at 2021-01-06 12:29:43 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/login" for ::1 at 2021-01-06 12:29:50 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pXc1HSL1LVyj7r7MnaXGsVrnuVzrQs02Dr/oZLH6IELnMbOJx1IRzv5KozVbhhIFSP4YIV2Au7T/8iDbLaGacw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:29:50 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:30:01 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SntjZVgTDD0Kbk5WODnWgujSdEfsZgKRmkERy6DASC0IPeXxvbQwr1fKU6/+GgI2+svVOlqkdBNrDNl0PJvyHA==", "email"=>"guest@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 288ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/9" for ::1 at 2021-01-06 12:30:01 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/9" for ::1 at 2021-01-06 12:33:30 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 443ms (Views: 438.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/9" for ::1 at 2021-01-06 12:33:34 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-01-06 12:33:40 +1100
+Processing by AirplanesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:4
+  Rendered airplanes/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 107ms (Views: 22.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2021-01-06 12:33:54 +1100
+Started GET "/airplanes/1" for ::1 at 2021-01-06 12:33:54 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:27
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:27
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.1ms)
+  Rendered airplanes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 31.1ms | ActiveRecord: 2.9ms)
+
+
+Completed 200 OK in 55ms (Views: 34.0ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/login" for ::1 at 2021-01-06 12:33:56 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"16A4KmnQzCWA24+OVv+PSXV1ATrddFimOQk0eL4k8UOV5r6+jHfwt91/kneQ3Fv9Z2ygR2u2LiTIRPzHIn9Lcg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:33:56 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:34:06 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uINTcDNwkz76w+xkI88JZjgUKHiHoin4MFpfF6pzPFL6xdXk1tevrKdn8Z3l7N3SKg2JBTFgX3rBF5eoNiiGYw==", "email"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 308ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/7" for ::1 at 2021-01-06 12:34:06 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-01-06 12:34:08 +1100
+Processing by AirplanesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:4
+  Rendered airplanes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2021-01-06 12:34:10 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:27
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7" for ::1 at 2021-01-06 12:36:14 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/7" for ::1 at 2021-01-06 12:43:35 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 245ms (Views: 196.1ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-01-06 12:43:41 +1100
+Processing by AirplanesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:4
+  Rendered airplanes/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 84ms (Views: 22.1ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2021-01-06 12:43:42 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:28
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for ::1 at 2021-01-06 12:43:52 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gZzaidh/MH9O08WNqAj6VoX5MFkiv2cBw5IB3Sp5F5XD2lwdPdgM7RN32HRuKy7il+CRJJR9EYMy38litiKtpA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:43:52 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:44:02 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OpbYHrqDutEMksDnMGNHWr6CFlTtQ5Y69+nfgF9R2g140F6KXySGQ1E23R72QJPurJu3KVuB4LgGpBc/wwpgPA==", "email"=>"guest@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 297ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/9" for ::1 at 2021-01-06 12:44:03 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-01-06 12:44:05 +1100
+Processing by AirplanesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:4
+  Rendered airplanes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2021-01-06 12:44:07 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:28
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2021-01-06 12:45:16 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:28
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:45:21 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:45:24 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aQNRFA+KrDfF9hxeyOz2OEjNxlxWDBkh0h5gqptBKt0rRdeA6i2QpZhSAacOzyKMWtRnIeDOb6MjU6gVBxqQ7A==", "email"=>"guest@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 296ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/9" for ::1 at 2021-01-06 12:45:25 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/Users/Brooke/SEI/projects/burning-airlines/rails-burning-airlines/app/views/users/show.html.erb:18: syntax error, unexpected `ensure', expecting `end'
+          ensure
+          ^~~~~~
+/Users/Brooke/SEI/projects/burning-airlines/rails-burning-airlines/app/views/users/show.html.erb:20: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/users/show.html.erb:18: syntax error, unexpected `ensure', expecting `end'
+app/views/users/show.html.erb:20: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/9" for ::1 at 2021-01-06 12:45:44 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 120ms (Views: 110.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reservations" for ::1 at 2021-01-06 12:46:48 +1100
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:21
+Completed 200 OK in 86ms (Views: 1.2ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:46:51 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:46:59 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YMk8htzD7Az93wweWEOKndAvDS4cEKvP2uj4tO9u66Uij7oSOWTQnqB7EeeeYF4pwjasU6rS3U0rpTALczVRlA==", "email"=>"admin@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 291ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/7" for ::1 at 2021-01-06 12:47:00 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/7" for ::1 at 2021-01-06 12:47:18 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 179ms (Views: 172.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/7" for ::1 at 2021-01-06 12:47:26 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for ::1 at 2021-01-06 12:47:36 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2021-01-06 12:47:42 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7gffVwMxVEFLLjUoZ2IXMsTZXWwENYh0R2+LKJ0OkJ5/pnpuav5w1iIpS1nvlzo2QrECAbSoKMgUHaTPi+Acw==", "email"=>"guest@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 291ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/9" for ::1 at 2021-01-06 12:47:42 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservations" for ::1 at 2021-01-06 12:47:44 +1100
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:21
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddPasswordDigestToUsers (20210105224225)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (154.6ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "password_digest"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105224225"]]
+  ↳ bin/rails:4
+  [1m[35m (52.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddPasswordToUsers (20210105224119)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "password"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105224119"]]
+  ↳ bin/rails:4
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddAdminToUsers (20210105224056)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "admin"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105224056"]]
+  ↳ bin/rails:4
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddEmailToUsers (20210105224027)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105224027"]]
+  ↳ bin/rails:4
+  [1m[35m (221.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddFlightIdToReservations (20210105223958)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "reservations" DROP COLUMN "flight_id"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105223958"]]
+  ↳ bin/rails:4
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddUserIdToReservations (20210105223929)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "reservations" DROP COLUMN "user_id"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105223929"]]
+  ↳ bin/rails:4
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddColsToReservations (20210105223902)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "reservations" DROP COLUMN "cols"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105223902"]]
+  ↳ bin/rails:4
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddRowToReservations (20210105223839)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "reservations" DROP COLUMN "row"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105223839"]]
+  ↳ bin/rails:4
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddPlaneIdToFlights (20210105223648)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "flights" DROP COLUMN "plane_id"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210105223648"]]
+  ↳ bin/rails:4
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddRowToReservations (20210105223839)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "reservations" ADD "row" integer[0m
+  ↳ db/migrate/20210105223839_add_row_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (23.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223839"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColsToReservations (20210105223902)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "reservations" ADD "cols" integer[0m
+  ↳ db/migrate/20210105223902_add_cols_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223902"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddUserIdToReservations (20210105223929)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "reservations" ADD "user_id" integer[0m
+  ↳ db/migrate/20210105223929_add_user_id_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223929"]]
+  ↳ bin/rails:4
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFlightIdToReservations (20210105223958)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "reservations" ADD "flight_id" integer[0m
+  ↳ db/migrate/20210105223958_add_flight_id_to_reservations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105223958"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddEmailToUsers (20210105224027)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" text[0m
+  ↳ db/migrate/20210105224027_add_email_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224027"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddAdminToUsers (20210105224056)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  ↳ db/migrate/20210105224056_add_admin_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224056"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddPasswordToUsers (20210105224119)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password" text[0m
+  ↳ db/migrate/20210105224119_add_password_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224119"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddPasswordDigestToUsers (20210105224225)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  ↳ db/migrate/20210105224225_add_password_digest_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210105224225"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddAirplaneIdToFlights (20210106015226)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "flights" ADD "airplane_id" integer[0m
+  ↳ db/migrate/20210106015226_add_airplane_id_to_flights.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210106015226"]]
+  ↳ bin/rails:4
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2380315062065263575)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+=======
 >>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2021-01-06 12:25:20 +1100
   [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/jkups/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -3446,3 +4473,6 @@ app/views/flights/index.html.erb:11:in `_app_views_flights_index_html_erb___2683
   [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
   [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
   [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+=======
+>>>>>>> 078e356d8bc68646700d21f642e53a3f95c206f7
+>>>>>>> 98b9ed8fc3447c3441f2fb49d005e5d309df3e79

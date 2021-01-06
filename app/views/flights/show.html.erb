@@ -24,6 +24,7 @@
 
 <br>
 <% if :check_for_admin == true%>
-<% end %>
+
 <%= link_to "Edit this Flight", edit_flight_path(@flight.id) %>
 <%= link_to "Delete this Flight", flight_path(@flight.id), method: 'delete' %>
+<% end %>
