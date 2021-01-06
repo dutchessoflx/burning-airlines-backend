@@ -14,6 +14,4 @@ Rails.application.routes.draw do
   resources :flights
   resources :reservations
 
-  # get '/flights/react' => 'flights#react_index'
-
 end

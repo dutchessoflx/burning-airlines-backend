@@ -22,11 +22,6 @@ class FlightsController < ApplicationController
     end
   end
 
-  def react_index
-    flights = Flight.where( to: params[:to], from: params[:from] )
-    render json: flights
-  end
-
   def show
     @flight= Flight.find params[:id]
   end
