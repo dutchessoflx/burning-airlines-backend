@@ -11,7 +11,6 @@ p 'creating user'
 
 u1=User.create!(
   name: "Admin",
-  password: "password",
   email: 'admin@email.com',
   admin: 1,
   password: 'chicken'
@@ -19,7 +18,6 @@ u1=User.create!(
 
 u2=User.create!(
   name: "Guest",
-  password: "password",
   email: 'guest@email.com',
   admin: 0,
   password: 'chicken'
