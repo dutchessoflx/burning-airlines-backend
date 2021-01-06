@@ -3386,3 +3386,63 @@ app/views/flights/show.html.erb:15:in `_app_views_flights_show_html_erb__2296157
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "flights"."to" FROM "flights"[0m
   ↳ db/seeds.rb:62
 >>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
+Started GET "/" for ::1 at 2021-01-06 12:25:20 +1100
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jkups/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by PageController#home as HTML
+  Rendering page/home.html.erb within layouts/application
+  Rendered page/home.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 5809ms (Views: 5806.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights" for ::1 at 2021-01-06 12:25:39 +1100
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (6.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:4
+  Rendered flights/index.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 128ms (Views: 66.3ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/flights" for ::1 at 2021-01-06 12:26:46 +1100
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:4
+  Rendered flights/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights/new" for ::1 at 2021-01-06 12:27:08 +1100
+Processing by FlightsController#new as HTML
+  [1m[36mAirplane Load (9.5ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/controllers/flights_controller.rb:4
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 263ms (Views: 199.4ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/flights" for ::1 at 2021-01-06 12:44:28 +1100
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (4.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:11
+  Rendered flights/index.html.erb within layouts/application (420.0ms)
+Completed 500 Internal Server Error in 563ms (ActiveRecord: 38.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    19:       <%= flight.from %> > <%= flight.to %>
+    20:     </li>
+    21:     <li>
+    22:       <%= flight.airplane.name %>
+    23:     </li>
+    24:     <li>
+    25:       <%= flight.airplane.row %>
+  
+app/views/flights/index.html.erb:22:in `block in _app_views_flights_index_html_erb___2683388254099925887_22040'
+app/views/flights/index.html.erb:11:in `_app_views_flights_index_html_erb___2683388254099925887_22040'
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
