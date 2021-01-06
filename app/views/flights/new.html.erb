@@ -1,2 +1,21 @@
 <h1>Flights#new</h1>
 <p>Find me in app/views/flights/new.html.erb</p>
+<%= form_with model: @flights, local: true do |f| %>
+  <%= f.label :flight, "Flight #:" %>
+  <%= f.text_field :flight %>
+  <br/>
+  <%= f.label :scheduled, "Date:" %>
+  <%= f.date_field :scheduled %>
+  <br/>
+  <%= f.label :to, "Arrival:" %>
+  <%= f.text_field :to %>
+  <br/>
+  <%= f.label :from, "Departure:" %>
+  <%= f.text_field :from %>
+  <br/>
+  <%= f.label :plane_id, "Plane:" %>
+  <%= select(:flight, :plane_id, options_for_select(@planes)) %>
+
+  <br/>
+  <%= f.submit "Create Flight" %>
+<% end %>

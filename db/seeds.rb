@@ -11,10 +11,12 @@ p 'creating user'
 
 u1=User.create!(
   name: "Admin",
+  password: "password"
 )
 
 u2=User.create!(
   name: "Guest",
+  password: "password"
 )
 puts "Created #{User.count} users"
 puts User.pluck(:name).join(',')

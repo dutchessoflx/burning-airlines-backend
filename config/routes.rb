@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   get '/flights' => 'flights#index'
-
+  get '/flights/new' => 'flights#new'
   post '/flights' => 'flights#create'
 
 
