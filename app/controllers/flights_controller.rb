@@ -16,12 +16,10 @@ class FlightsController < ApplicationController
 
     if params[:to] || params[:from]
       @flights = Flight.where( to: params[:to], from: params[:from] )
+      render json: @flights
     else
       @flights = Flight.all
     end
-
-     render json: @flights
-
   end
 
   def react_index

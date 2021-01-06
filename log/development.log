@@ -5656,3 +5656,212 @@ Processing by FlightsController#index as HTML
 Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:20:12 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.8ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 212ms (Views: 139.6ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:24:28 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (2.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 97ms (Views: 90.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:26:34 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 82ms (Views: 78.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:30:12 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (106.6ms)
+Completed 200 OK in 185ms (Views: 133.1ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:30:23 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 89ms (Views: 81.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/flights/react?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:34:50 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney", "id"=>"react"}
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:35
+Completed 404 Not Found in 32ms (ActiveRecord: 12.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=react):
+  
+app/controllers/flights_controller.rb:35:in `show'
+Started GET "/flights/react?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:35:08 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney", "id"=>"react"}
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:35
+Completed 404 Not Found in 59ms (ActiveRecord: 15.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=react):
+  
+app/controllers/flights_controller.rb:35:in `show'
+Started GET "/flights/react?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:35:20 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney", "id"=>"react"}
+  [1m[36mFlight Load (5.8ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:35
+Completed 404 Not Found in 10ms (ActiveRecord: 5.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=react):
+  
+app/controllers/flights_controller.rb:35:in `show'
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:36:50 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/controllers/flights_controller.rb:24
+Completed 200 OK in 57ms (Views: 25.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/flights/react?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:37:52 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney", "id"=>"react"}
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:34
+Completed 404 Not Found in 40ms (ActiveRecord: 19.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=react):
+  
+app/controllers/flights_controller.rb:34:in `show'
+Started GET "/flights/react?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:40:12 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney", "id"=>"react"}
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:35
+Completed 404 Not Found in 38ms (ActiveRecord: 17.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=react):
+  
+app/controllers/flights_controller.rb:35:in `show'
+Started GET "/flights/react?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:40:29 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney", "id"=>"react"}
+  [1m[36mFlight Load (3.0ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:35
+Completed 404 Not Found in 52ms (ActiveRecord: 20.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=react):
+  
+app/controllers/flights_controller.rb:35:in `show'
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:40:57 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 165ms (Views: 118.1ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:46:05 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 126ms (Views: 87.3ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:46:14 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (111.3ms)
+Completed 200 OK in 189ms (Views: 145.0ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/flights?from=Perth&to=Sydney" for ::1 at 2021-01-06 15:47:20 +1100
+Processing by FlightsController#index as HTML
+  Parameters: {"from"=>"Perth", "to"=>"Sydney"}
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."to" = $1 AND "flights"."from" = $2[0m  [["to", "Sydney"], ["from", "Perth"]]
+  ↳ app/controllers/flights_controller.rb:19
+Completed 200 OK in 55ms (Views: 25.2ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/flights" for ::1 at 2021-01-06 15:47:49 +1100
+Processing by FlightsController#index as HTML
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:11
+  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/flights/index.html.erb:22
+  Rendered flights/index.html.erb within layouts/application (78.2ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 15.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    19:       <%= flight.from %> > <%= flight.to %>
+    20:     </li>
+    21:     <li>
+    22:       <%= flight.airplane.name %>
+    23:     </li>
+    24:     <li>
+    25:       <%= flight.airplane.rows %>
+  
+app/views/flights/index.html.erb:22:in `block in _app_views_flights_index_html_erb__3805539530825193824_109020'
+app/views/flights/index.html.erb:11:in `_app_views_flights_index_html_erb__3805539530825193824_109020'
