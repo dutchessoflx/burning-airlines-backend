@@ -7,9 +7,10 @@ class ReservationsController < ApplicationController
 
   def create
     # headers['Access-Control-Allow-Origin'] = '*'
+    rowCol = params[:seat_id].split('-')
     reservation = Reservation.create(
-      row: params[:seat_id].slice(0),
-      cols: params[:seat_id].slice(1),
+      row: rowCol[0],
+      cols: rowCol[1],
       user_id: params[:user_id],
       flight_id: params[:flight_id]
     )

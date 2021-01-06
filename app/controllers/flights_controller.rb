@@ -15,8 +15,11 @@ class FlightsController < ApplicationController
     headers['Access-Control-Allow-Origin'] = '*'
 
     if params[:to] || params[:from]
-      @flights = Flight.where( to: params[:to], from: params[:from] )
-      render json: @flights
+      flights = Flight.where( to: params[:to], from: params[:from] )
+
+      flights.each { |flight| flight.airplane_name = flight.airplane.name }
+
+      render json: flights
     else
       @flights = Flight.all
     end
