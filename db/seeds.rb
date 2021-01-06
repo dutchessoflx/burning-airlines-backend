@@ -6,33 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+User.destroy_all
 p 'creating user'
 
 u1=User.create!(
   name: "Admin",
-<<<<<<< HEAD
-  password: "password"
-=======
   email: 'admin@email.com',
   admin: 1,
   password: 'chicken'
->>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
+
 )
 
 u2=User.create!(
   name: "Guest",
-<<<<<<< HEAD
-  password: "password"
-=======
   email: 'guest@email.com',
   admin: 0,
   password: 'chicken'
->>>>>>> d2d2b5ea5db3c6bd5c48a28689169c12ad903b62
 )
+
 puts "Created #{User.count} users"
 puts User.pluck(:name).join(',')
 
+Airplane.destroy_all
 
 p 'creating airplanes'
 
@@ -50,6 +45,9 @@ a2=Airplane.create!(
 
 puts "Created #{Airplane.count} aeroplanes"
 puts Airplane.pluck(:name).join(',')
+
+Flight.destroy_all
+
 p 'creating flights'
 
 f1=Flight.create!(
