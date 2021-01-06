@@ -1,3 +1,42 @@
 body{
   color:black;
+  font-size: 16pt;
+  font-family: Lucidatypewriter, monospace;;
+  margin:  auto;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(187, 120, 58, 0.8);
+}
+
+div{
+  background-color: rgba(255, 0, 0, 0.6) ;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 60vw;
+  margin: auto;
+  padding: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  height: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-top: 5px;
+}
+
+a:hover{
+  font-weight: bolder;
+}
+ul{
+  background-color: rgba(255, 0, 0, 0.6);
+  border-radius: 10px;
+    width: 60vw;
+    margin:auto;
+}
+li{
+  list-style: none;
 }
