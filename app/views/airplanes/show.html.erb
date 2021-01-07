@@ -1,13 +1,13 @@
 <h1>#<%= @airplane.id %> ~ <%= @airplane.name %> </h1>
 
 <ul>
-  <li>Number of Rows-
-    <%= @airplane.rows %>
+  <li>Number of Rows -
+    <%= @airplane.rows %> |
   </li>
-  <li>Number of Columns-
-    <%= @airplane.cols %>
+  <li>Number of Columns -
+    <%= @airplane.cols %> |
   </li>
-  <li>Total Seats-
+  <li>Total Seats -
     <%= @airplane.rows * @airplane.cols %>
   </li>
 
@@ -30,15 +30,11 @@
 <% end %>
 </ul>
 
-
-
-
-
 <br>
 <% if @current_user.admin == true%>
 
-<%= link_to "Edit this Airplane", edit_airplane_path(@airplane.id) %>
-<%= link_to "Delete this Airplane", airplane_path(@airplane.id), method: 'delete' %>
+<%= link_to "Edit this Airplane", edit_airplane_path(@airplane.id), class:"button" %>
+<%= link_to "Delete this Airplane", airplane_path(@airplane.id), method: 'delete', class:"button" %>
 <% end %>
 <br>
-<%= link_to "Go back to All Airplanes", airplanes_path %>
+<%= link_to "Go back to All Airplanes", airplanes_path, class:"button" %>
