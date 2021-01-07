@@ -35,7 +35,7 @@ ul{
   font-size: 18px;
   background-color: rgba(255, 0, 0, 0.6);
   border-radius: 10px;
-  width: 60vw;
+  width: 62vw;
   margin: 5px auto;
   padding: 0;
 }
@@ -44,4 +44,20 @@ li{
   border-radius: 10px;
   display: inline-block;
   padding: 10px 0;
+}
+
+.rows{
+  /* background-color: blue; */
+  text-align: left;
+  width: 1005;
+
+}
+
+.cols{
+  width: 80px;
+  display: inline;
+  background-color: purple;
+  position: relative;
+  top: -31px;
+  left: 20px;
 }

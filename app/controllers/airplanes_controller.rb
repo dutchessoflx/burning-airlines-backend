@@ -9,13 +9,9 @@ skip_before_action :verify_authenticity_token, raise: false
 
   def create
     headers['Access-Control-Allow-Origin'] = '*'
-    airplane = Airplane.create(
-      name: params[:name],
-      rows: params[:rows],
-      cols: params[:cols]
-    )
-    redirect_to airplane_path
-    render json: airplane
+    airplane = Airplane.create airplane_params
+    redirect_to airplanes_path
+    # render json: airplane
   end
 
   def index
