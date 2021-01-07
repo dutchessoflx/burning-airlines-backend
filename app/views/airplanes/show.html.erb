@@ -15,14 +15,14 @@
 </ul>
 
 <ul>
-  <% x= 1 %>
+  <% x= 0 %>
 
 
 <% while x < @airplane.rows %>
-  <div class='rows'>Row:<%= x %></div>
-  <% y= 1 %>
+  <div class='rows'>Row:<%= x+1 %></div>
+  <% y= 0 %>
 <% while y < @airplane.cols %>
-  <div class='cols'>Seat:<%=y%></div>
+  <div class='cols'>Seat:<%=y+1%></div>
   <% y = y+1 %>
 <% end %>
 

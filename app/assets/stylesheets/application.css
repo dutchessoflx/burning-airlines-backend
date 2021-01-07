@@ -1,7 +1,7 @@
 body{
   color:black;
   font-size: 16pt;
-  font-family: Lucidatypewriter, monospace;;
+  font-family: Lucidatypewriter, monospace;
   margin:  auto;
   text-align: center;
   border-radius: 10px;
@@ -44,7 +44,6 @@ li{
   padding: 10px 0;
 }
 
-<<<<<<< HEAD
 .rows{
   /* background-color: blue; */
   text-align: left;
@@ -59,7 +58,8 @@ li{
   position: relative;
   top: -31px;
   left: 20px;
-=======
+}
+
 input, select {
    padding: 10px 15px;
    margin: 10px 0;
@@ -105,5 +105,4 @@ input:focus, button:focus, select:focus {
 .top-links.login {
   border-radius: 5px;
   padding: 10px;
->>>>>>> 934af6551f1086e6dedfc5a94767947f35f1789c
 }
