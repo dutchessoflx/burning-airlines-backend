@@ -1,13 +1,12 @@
 
 <h1>Airplanes</h1>
-<ul class='airplane'>
-  <% @airplanes.each do |a| %>
-  <li>
-    <%= link_to a.name, airplane_path(a.id)%>
-  </li>
+<div class='airplane'>
+  <% @airplanes.each do |airplane| %>
+  <span>
+    <%= link_to airplane.name, airplane_path(airplane.id) %>
+  </span>
   <% end %>
-
-</ul>
-
-
-<%= link_to "Add a Plane ", new_airplane_path %>
+  <div>
+    <%= link_to "Add a Plane ", new_airplane_path, class:"button"  %>
+  </div>
+</div>

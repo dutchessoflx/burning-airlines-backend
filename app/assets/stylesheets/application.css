@@ -9,7 +9,7 @@ body{
 }
 
 div{
-  background-color: rgba(255, 0, 0, 0.6) ;
+  /* background-color: rgba(255, 0, 0, 0.6) ; */
   border-radius: 10px;
   text-decoration: none;
   width: 60vw;
@@ -20,8 +20,6 @@ div{
 a{
   text-decoration: none;
   color: black;
-  cursor: pointer;
-  height: 10px;
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
@@ -44,4 +42,51 @@ li{
   border-radius: 10px;
   display: inline-block;
   padding: 10px 0;
+}
+
+input, select {
+   padding: 10px 15px;
+   margin: 10px 0;
+   border-radius: 5px;
+   border: none;
+   font-size: 16px;
+ }
+
+input:focus, button:focus, select:focus {
+  outline: none;
+}
+
+#login_button:hover, #submit_button {
+  background-color: maroon;
+  color: white;
+  cursor: pointer;
+}
+
+.airplane span {
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: maroon;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.flight-wrapper {
+  margin-top: 40px;
+}
+
+.top-links {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.top-links.login {
+  border-radius: 5px;
+  padding: 10px;
 }
